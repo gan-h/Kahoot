@@ -51,14 +51,7 @@ socket.addEventListener("message", receiveMessage);
 var createRoom = (questions) => {
 	let request = {
 		type: "createRoom",
-		questions: [
-			{
-				question: "Test",
-				choices: ["1", "2", "3"],
-				answer: 1,
-				time: 30,
-			},
-		]
+		questions: questions
 	};
 	request = JSON.stringify(request);
 	console.log("Creating room: ", request);
